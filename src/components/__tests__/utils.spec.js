@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { probability, rnd } from '../../../utils'
+import { areAllItemsEqual, probability, rnd, rndPosition } from '../../../utils'
 
 describe('rnd function', () => {
   test('randomness', () => {
@@ -28,5 +28,23 @@ describe('probability function', () => {
 
   test('impossible probability', () => {
     expect(probability(0)).toEqual(false)
+  })
+})
+
+describe('rndPosition function', () => {
+  test('chord length', () => {
+    const l = rnd(0, 500)
+    const { x, y } = rndPosition(l, '')
+    expect(x ** 2 + y ** 2).toBeCloseTo(l ** 2, 0)
+  })
+})
+
+describe('areAllItemsEqual function', () => {
+  test('all items are equal', () => {
+    expect(areAllItemsEqual(['cherry', 'cherry', 'cherry'])).toEqual(true)
+  })
+
+  test('all items are not equal', () => {
+    expect(areAllItemsEqual(['cherry', 'orange', 'cherry'])).toEqual(false)
   })
 })

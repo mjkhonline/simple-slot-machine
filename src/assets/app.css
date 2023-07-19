@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply text-white px-8 py-4 text-xl rounded-lg uppercase;
+  }
+
+  .btn-disabled {
+    @apply bg-gray-400 cursor-not-allowed !important;
+  }
+}
