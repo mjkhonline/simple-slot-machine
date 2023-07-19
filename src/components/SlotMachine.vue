@@ -83,7 +83,7 @@ async function roll() {
 }
 
 function generateSymbols() {
-  const symbols = new Array(props.numberOfBlocks).fill('').map(getARandomSymbol)
+  let symbols = new Array(props.numberOfBlocks).fill('').map(getARandomSymbol)
 
   if (areAllItemsEqual(symbols)) {
     const { reRollProbability: prob } = CHEATING_RULES.find((rule) =>
@@ -91,7 +91,7 @@ function generateSymbols() {
     )
 
     if (probability(prob)) {
-      return generateSymbols()
+      symbols = symbols.map(getARandomSymbol)
     }
   }
 
