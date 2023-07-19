@@ -96,7 +96,7 @@ describe('SlotMachine', () => {
     const wrapper = mount(SlotMachine, {
       props: { numberOfBlocks: 5 }
     })
-    wrapper.vm.machine.blocks = new Array(5).fill({ state: 'revealed', symbol: 'orange' })
+    wrapper.vm.machine.blocks = new Array(5).fill({ state: 'revealed', symbol: 'cherry' })
     expect(wrapper.vm.isWinningRoll).toBe(true)
   })
 })
