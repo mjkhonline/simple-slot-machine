@@ -1,5 +1,5 @@
 <script setup></script>
 
 <template>
-  <header>Hi</header>
+  <header class="text-4xl text-blue-600">Hi</header>
 </template>
