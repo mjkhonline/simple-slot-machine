@@ -2,6 +2,8 @@
 
 a Slot Machine Game powered by Vue 3 + Vite + Vitest
 
+Live Demo: [https://simple-slot-machine.vercel.app/](https://simple-slot-machine.vercel.app/)
+
 ## Project Setup
 ### Install Dependencies
 ```sh
